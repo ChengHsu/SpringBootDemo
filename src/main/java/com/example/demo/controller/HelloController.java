@@ -3,25 +3,45 @@ package com.example.demo.controller;
 
 import com.example.demo.properties.GirlProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by 廖师兄
+ * Created by xucheng
  * 2016-10-30 23:36
  */
-@RestController
-@RequestMapping("/hello")
-public class HelloController {
+//@RestController
+//@RequestMapping("/hello")
+//public class HelloController {
+//
+//    @Autowired
+//    private GirlProperties girlProperties;
+//
+//    @GetMapping(value = "/say")
+//    public String say(@RequestParam(value = "id", required = false, defaultValue = "0") Integer myId) {
+//        return "id: " + myId;
+////        return girlProperties.getCupSize();
+//    }
+//}
+    @Controller
+    public class HelloController {
 
-    @Autowired
-    private GirlProperties girlProperties;
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
 
-    @GetMapping(value = "/say")
-    public String say(@RequestParam(value = "id", required = false, defaultValue = "0") Integer myId) {
-        return "id: " + myId;
-//        return girlProperties.getCupSize();
+    @RequestMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
+
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
     }
 }
+

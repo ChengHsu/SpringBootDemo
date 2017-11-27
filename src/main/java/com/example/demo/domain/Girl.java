@@ -9,8 +9,8 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 /**
- * Created by 廖师兄
- * 2016-11-03 23:07
+ * Created by xucheng
+ *
  */
 @Entity
 public class Girl {
@@ -22,7 +22,7 @@ public class Girl {
     @NotBlank(message = "这个字段必传")
     private String cupSize;
 
-    @Min(value = 18, message = "未成年少女禁止入门")
+    @Min(value = 18, message = "未成年禁入")
 //    @NotNull
 //    @Max()
 //    @Length()
